@@ -5,7 +5,7 @@
 <p>There was a huge number of attempts to create a "reCAPTCHA killer", some were less successful, some only looked like a threat to reCAPTCHA, but in fact turned out to be nothing. Yet the fact remains that the desire of competitors to do something better and more reliable than reCAPTCHA demonstrates its popularity.</p>
 <h2>How to bypass reCAPTCHA using python (example of a code)</h2>
 <p>If you do not trust any third-party modules, I have prepared the most universal code that can be inserted into your Python script with minor modifications and solve the reCAPTCHA automatically. Here is the code itself:</p>
-```python
+<pre>
   import requests
 import time
 
@@ -87,7 +87,7 @@ site_key_v3 = 'your_site_key_v3'
 url_v3 = 'https://example.com'
 recaptcha_token_v3 = solve_recaptcha_v3(site_key_v3, url_v3)
 print(f"Received token for reCAPTCHA v3: {recaptcha_token_v3}")
-```
+</pre>
 <p>However, before using the provided script, carefully read the recommendations of the service for recognizing a particular type of reCAPTCHA in order to have an idea how this code works.</p>
 <p></p>Also, do not forget to insert your API key in the code and, of course, install the necessary modules.</p>
 
