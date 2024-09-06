@@ -5,8 +5,9 @@
 <p>There was a huge number of attempts to create a "reCAPTCHA killer", some were less successful, some only looked like a threat to reCAPTCHA, but in fact turned out to be nothing. Yet the fact remains that the desire of competitors to do something better and more reliable than reCAPTCHA demonstrates its popularity.</p>
 <h2>How to bypass reCAPTCHA using python (example of a code)</h2>
 <p>If you do not trust any third-party modules, I have prepared the most universal code that can be inserted into your Python script with minor modifications and solve the reCAPTCHA automatically. Here is the code itself:</p>
-<pre>
-  import requests
+
+```python
+import requests
 import time
 
 API_KEY = 'Your_API_2Captcha_key'
@@ -75,7 +76,7 @@ def solve_recaptcha_v3(site_key, url, action='verify', min_score=0.3):
             continue
         else:
             raise Exception(f"Error while solving captcha: {result['request']}")
-
+```
 # Usage example for reCAPTCHA v2
 site_key_v2 = 'your_site_key_v2'
 url_v2 = 'https://example.com'
@@ -87,19 +88,19 @@ site_key_v3 = 'your_site_key_v3'
 url_v3 = 'https://example.com'
 recaptcha_token_v3 = solve_recaptcha_v3(site_key_v3, url_v3)
 print(f"Received token for reCAPTCHA v3: {recaptcha_token_v3}")
-</pre>
+
 <p>However, before using the provided script, carefully read the recommendations of the service for recognizing a particular type of reCAPTCHA in order to have an idea how this code works.</p>
 <p></p>Also, do not forget to insert your API key in the code and, of course, install the necessary modules.</p>
 
 <h2>How to bypass reCAPTCHA in node js</h2>
 <p>As in the case of Python, for those who do not like ready-made solutions, below is a script for solving a captcha using the node js programming language. I remind you to not forget to install the necessary modules for the code to work, including:</p>
-<code>axios</code>
+`axios`
 <p>You can install it using this command –</p>
-<code>
-npm install axios
-</code>
+`npm install axios`
 <p>Here is the code itself:</p>
-<pre>const axios = require('axios');
+
+```js
+const axios = require('axios');
 const sleep = require('util').promisify(setTimeout);
 
 const API_KEY = 'YOUR_API_KEY_2CAPTCHA'; // Replace with your real API key
@@ -222,11 +223,13 @@ async function solveReCaptchaV3(siteKey, pageUrl, action = 'verify', minScore = 
     const tokenV3 = await solveReCaptchaV3(siteKeyV3, pageUrlV3, action, minScore);
     console.log(`Received token for reCAPTCHA v3: ${tokenV3}`);
 })();
-</pre>
+```
 <p>Also, do not forget to insert your API key into the code, instead of <code>"'YOUR_API_KEY_2CAPTCHA'"</code></p>
 <h2>How to recognize a reCAPTCHA in PHP</h2>
 <p>Well, for those who are not used to using ready-made modules, here is the code for integration directly. The code uses standard PHP functions such as file_get_contents and json_decode, here is the code itself:</p>
-<pre><?php
+
+```php
+<?php
 
 function solveRecaptchaV2($apiKey, $siteKey, $url) {
     $requestUrl = "http://2captcha.com/in.php?key={$apiKey}&method=userrecaptcha&googlekey={$siteKey}&pageurl={$url}&json=1";
@@ -315,6 +318,5 @@ I also remind you of the need to replace some parameters in the code, in particu
 $apiKey = 'YOUR_API_KEY_2CAPTCHA';
  $siteKeyV2 = 'YOUR_SITE_KEY_V2';
 $urlV2 = 'https://example.com';
-</pre>
+```
 <p>Thus, using the examples given, you can solve most of the issues related to reCAPTCHA recognition. You can ask questions in the comments if there are any left!</p>
-
