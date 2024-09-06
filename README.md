@@ -1,1 +1,5 @@
-# recaptcha_solver
+# How to bypass reCAPTCHA 
+No matter how many times people wrote that the captcha has outlived itself long time ago and no longer works as effectively as its developers would have liked initially, however, the owners of Internet resources continue to protect their projects with captchas. But what is the most popular captcha of our time?
+Clarification – all the code that will be presented in this article has been prepared based on the API documentation of the captcha recognition service 2captcha
+It is recaptcha. Recaptcha V2, V3, etc., that was created by Google back in 2007. It has been many years since the first recaptcha appeared, but it continues to keep the garland, periodically losing ground to competitors and then winning it back. But recaptcha has never taken the 2nd place in popularity, despite all its imperfections in front of neural networks.
+There was a huge number of attempts to create a "recaptcha killer", some were less successful, some only looked like a threat to recaptcha, but in fact turned out to be nothing. Yet the fact remains that the desire of competitors to do something better and more reliable than recaptcha demonstrates its popularity.
